@@ -18,7 +18,7 @@
     <a href="t.html" class="menu-item" onclick="setActive(this)">Тест</a>
     <a href="p.html" class="menu-item" onclick="setActive(this)">Паспорт</a>
     <a href="j.html" class="menu-item" onclick="setActive(this)">Задача</a>
-    <a href="https://rutube.ru/video/c8201dc7b17de76b089c09eee5be884c/?r=plwd" target="_blank" class="menu-item" onclick="setActive(this)">Пилотный эпизод</a>
+    <a href="https://rutube.ru/video/c8201dc7b17de76b089c09eee5be884c/?r=plwd" class="menu-item" onclick="setActive(this)">Пилотный эпизод</a>
     <a href="index.html#3" class="menu-item" onclick="setActive(this)">Об авторе</a>
     <a href="u.html" class="menu-item" onclick="setActive(this)">О Нас</a>
     <a href="https://i.pinimg.com/736x/5b/31/ef/5b31efd19fc49db2b401d8f35a7d4848.jpg" class="menu-item" onclick="setActive(this)">
@@ -32,24 +32,24 @@
 <!--<form action="from.php'>-->
 <!--<form action="ee.txt" method='get' target='_self'>-->
 <form action="ee.txt" id="UserEnter" name="UserEnter" target="_blank">
-    <p>Для поисковика:<input type="hidden"  name="q" value="search"></p>
-    <p>Фамилия: <input type="Text" name="last_name" size=20  value="Петров"></p>
+  <p>Имя: <input type="Text" name="last_name" size=20  value="Рита"></p>
+    <p>Фамилия: <input type="Text" name="last_name" size=20  value="Чупрова"></p>
     <p>Возраст: <input type="Number" name="age" size=20 value="0"></p>
-    <p>Смотрели Гравити Фооз?:
+    <p>Смотрели Гравити Фолз:
         <input type="Radio" name="place" value="Yes"> Да
         <input type="Radio" name="place" value="No" checked >Нет
     </p>
 
-    <p>Стаж работы:
-        <input type="Checkbox" name="experience"  value="10" checked>Маркетологом - 10
-        <input type="Checkbox"  name="experience"   value="20" checked>Экономистом -20
-        <input type="Checkbox" name="experience" value="30" checked>Менеджером -30
+    <p>Какие сезоны смотрели :
+        <input type="Checkbox" name="experience"  value="0" checked>Ни одного
+        <input type="Checkbox"  name="experience"   value="1" checked> 1 сезон
+        <input type="Checkbox" name="experience" value="2" checked> 2 сезон
     </p>
 
-    <p>Знание английского
+    <p>Знание персонажей:
         <select name="languages">
-            <OPTION value="Владею свободно">Владею свободно</OPTION>
-            <OPTION value="Читаю и перевожу со словарем">Читаю и перевожу со словарем</OPTION>
+            <OPTION value="знаю">Хорошо знаю </OPTION>
+            <OPTION value="не знаю">Плохо знаю</OPTION>
         </select>
     </p>
 
@@ -58,14 +58,14 @@
         <TEXTAREA cols=80 name="textarea" rows=4>Мои пожелания </TEXTAREA>
     </p>
 
-    <p>Дата: <input type="date" name="user_date"  value='2024-01-10'></p>
+    <p>Дата: <input type="date" name="user_date"  value='2024-06-11'></p>
     <p>Пароль: <input type="Password" name="password" size=9  value="12345"></p>
     <!--Все нижерасположенные фрагменты перемещать нельзя, редактировать можно-->
-    <p>Название файла: <input type="Техт" name="000_file_name" value="ee.txt" size='30'></p>
+    <p>Название файла: <input type="Техт" name="file_name" value="ee.txt" size='30'></p>
 
-    <p> Тип записи в файл:<select name="010_mode">
-        <OPTION value="a">a - дозаписать в файл</OPTION>
-        <OPTION value="w">w - очисить файл и записать в файл</OPTION>
+    <p> Тип записи в файл:<select name="30_mode">
+        <OPTION value="a">Добавить в файл</OPTION>
+        <OPTION value="w">Очисить файл и записать в файл</OPTION>
     </select></p>
 
     <input type="hidden" name="function"  value="page">
