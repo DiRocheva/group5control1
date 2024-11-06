@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="st.css">
+   <title>Решение задачи</title>
+  </head>
+
+<html>
+<body>
+  <div class="menu">
+    <a href="index.html" class="menu-item" onclick="setActive(this)">Главная</a>
+    <a href="news.html" class="menu-item" onclick="setActive(this)">Новости</a>
+    <a href="reg.html" class="menu-item" onclick="setActive(this)">Регистрация</a>
+    <a href="m.html" class="menu-item" onclick="setActive(this)">Мерч</a>
+    <a href="t.html" class="menu-item" onclick="setActive(this)">Тест</a>
+    <a href="p.html" class="menu-item" onclick="setActive(this)">Паспорт</a>
+    <a href="j.html" class="menu-item" onclick="setActive(this)">Задача</a>
+    <a href="https://rutube.ru/video/c8201dc7b17de76b089c09eee5be884c/?r=plwd" class="menu-item" onclick="setActive(this)">Пилотный эпизод</a>
+    <a href="index.html#3" class="menu-item" onclick="setActive(this)">Об авторе</a>
+    <a href="u.html" class="menu-item" onclick="setActive(this)">О Нас</a>
+    <a href="https://i.pinimg.com/736x/5b/31/ef/5b31efd19fc49db2b401d8f35a7d4848.jpg" class="menu-item" onclick="setActive(this)">
+        <img src="https://i.pinimg.com/736x/5b/31/ef/5b31efd19fc49db2b401d8f35a7d4848.jpg" width="30" height="33">
+    </a>
+</div>
+
+
+
+
+<script>
+function detectNumberType() {
+    const number = document.getElementById("number").value;
+
+   if (number > 0) {
+        document.getElementById("result").value = "Это число положительное";
+    } else if (number < 0) {
+        document.getElementById("result").value = "Это число отрицательное";
+    } else {
+        document.getElementById("result").value = "Это число - ноль";
+    }
+}
+</script>
+  
+    <p name="formulation"> Дано вещественное число. Определить, какое это число: положительное, отрицательное, ноль. - отправить все на сервер</p>
+    <form action="ee.txt" id="UserEnter" name="UserEnter" target="_blank">
+        <ul>
+            <li>Формулировка задачи 
+                <br><textarea cols="60" rows="4" id="task" name="formulation"> Дано вещественное число. Определить, какое это число: положительное, отрицательное, ноль. - отправить все на сервер</textarea></li>
+            <li>Число: <input id="number" name="number"  type="number" value="0"></li>
+            <li>Это число: <input type="text" id="result" name="resultOutput" value="не определено"></li>
+           
+            <li>Отправить на сервер: <input id="send" type="submit" value="Отправить"></li>
+
+        </ul>
+    </form>
+    Проверить число :<button onclick="detectNumberType()">Узнать какое это число</button> 
+</body>
+<script src="uuu.js"></script>
+
+</html>
