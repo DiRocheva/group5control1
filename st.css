@@ -10,7 +10,8 @@ body {
 }
 
 .menu {
-  display: flex; /* Используем flexbox для горизонтального расположения */
+  display:flex; /* Используем flexbox для горизонтального расположения */
+  flex: wrap;
   background-color: black;
   padding: 10px; /* Отступы для меню */
 }
@@ -18,17 +19,17 @@ body {
 .menu-item {
   color: white;
   text-decoration: none;
-  padding: 15px 25px; /* Отступы вокруг текста */
+  padding: 15px 25px; 
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 .menu-item:hover {
-  background-color: #333; /* Темно-серый при наведении */
+  background-color: #333; 
 }
 
 .menu-item.active {
-  background-color: green; /* Зеленый цвет для активного элемента */
+  background-color: green; 
 }
 
 .gfg {
@@ -187,4 +188,211 @@ body {
   column-gap: 30px; /* Отступ между колонками */
   row-gap: 40px; /* Отступ между рядами */
   margin: 0 auto;
+
+}
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: lightblue;
+  padding: 20px;
+}
+
+
+.menu {
+  background-color: #0c0000;
+  padding: 10px;
+  display: flex; /* Используем Flexbox для управления элементами */
+  justify-content: space-around; /* Равномерно распределяем элементы по горизонтали */
+  flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+}
+
+.menu-item {
+  margin: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #e5f10d;
+  border: 1px solid transparent; /* Добавляем границу для визуальной разметки */
+  border-radius: 5px; /* Скругление углов */
+  transition: background-color 0.3s; /* Плавный переход цвета при наведении */
+}
+
+.menu-item:hover {
+  background-color: #252424; /* Цвет фона при наведении */
+}
+
+.menu-item img {
+  vertical-align: middle; /* Вертикальное выравнивание картинки */
+}
+
+
+/* Media query для маленьких экранов */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column; /* Меняем направление flex-элементов на столбец */
+    align-items: center; /* Выравниваем элементы по центру */
+  }
+  .menu-item{
+    width: 100%; /* Растягиваем элементы на всю ширину контейнера */
+    box-sizing: border-box; /*чтобы отступы не влияли на общую ширину*/
+  }
+}
+body {
+  font-family: sans-serif;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Элементы формы выстраиваются вертикально */
+  width: 80%;
+  max-width: 500px; /* Максимальная ширина формы */
+  margin: 0 auto; /* Центрирование формы */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Занимает всю ширину контейнера */
+  box-sizing: border-box; /* Учитываем padding и border при расчете ширины */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #45a049;
+}
+
+/* Media query для меньших экранов */
+@media (max-width: 500px) {
+  form {
+    width: 95%; /* Занимает почти всю ширину экрана */
+  }
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.passport-container {
+  display: flex;
+  flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+  justify-content: space-around; /* Распределение элементов */
+  margin-bottom: 20px;
+}
+
+.passport-image {
+  width: 110px;
+  margin: 10px;
+  float: left; /* Важно для расположения изображения слева */
+}
+
+table {
+  width: 100%; /* Таблица занимает всю ширину */
+  border-collapse: collapse; /* Убираем пробелы между ячейками */
+  margin: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.latin-translation {
+    display: none; /* Скрываем по умолчанию */
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .passport-container {
+    flex-direction: column; /* Элементы выстраиваются вертикально */
+    align-items: center; /* Выравнивание по центру */
+  }
+
+  .passport-image {
+    float: none; /* Убираем float на маленьких экранах */
+    margin-bottom: 10px; /* Добавляем отступ снизу */
+    width: 80%; /* Расширяем картинку на всю ширину */
+    max-width: 200px; /* Ограничиваем размер изображения */
+  }
+  table {
+    width: auto; /* ширина таблицы будет меньше чем ширина экрана*/
+  }}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto; /* Добавляем горизонтальную полосу прокрутки */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.table-container {
+  overflow: auto; /* Включает прокрутку, если содержимое превышает размеры контейнера */
+  border: 1px solid #ccc; /* Добавлено для наглядности */
+}
+
+table {
+  width: 100%; /* Таблица занимает всю ширину контейнера */
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.button-style {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+img {
+  max-width: 100%;
+  height: auto; /* Автоматически устанавливает высоту, сохраняя пропорции */
+  display: block; /* Убирает лишнее пространство снизу изображения */
 }
